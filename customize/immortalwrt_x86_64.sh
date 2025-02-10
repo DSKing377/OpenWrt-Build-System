@@ -81,6 +81,7 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 
 #额外插件
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth=1 https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
 
 # 添加 luci-app-accesscontrol-plus 插件
 git clone https://github.com/CrazyPegasus/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus
