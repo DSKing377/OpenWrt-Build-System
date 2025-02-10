@@ -225,12 +225,7 @@ jobs:
         echo "已过时间：$((count / 60))分钟$((count % 60))秒"
         # 循环结束后删除文件
         sudo rm -f /home/runner/stop_signal
-
-    - name: Setup toolchain
-      working-directory: ./${{ env.BD_PROJECT }}
-      run: |
-        make toolchain/install -j$(nproc)
-      
+         
     - name: Download package
       working-directory: ./${{ env.BD_PROJECT }}
       run: |
