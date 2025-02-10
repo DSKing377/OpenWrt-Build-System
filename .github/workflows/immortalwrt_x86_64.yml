@@ -227,7 +227,9 @@ jobs:
         sudo rm -f /home/runner/stop_signal
 
     - name: Setup toolchain
-      run: make toolchain/install -j$(nproc)
+      working-directory: ./${{ env.BD_PROJECT }}
+      run: |
+        make toolchain/install -j$(nproc)
       
     - name: Download package
       working-directory: ./${{ env.BD_PROJECT }}
