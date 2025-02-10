@@ -33,17 +33,22 @@ function git_sparse_clone() {
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-lib-taskd
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-lib-xterm
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages taskd
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
+
 #更换插件名称
 sed -i 's/("iStore"),/("应用中心"),/g' package/linpc/luci-app-store/luasrc/controller/store.lua
 
 #adguardhome
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+# git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adguardhome
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome
 
 #科学上网
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-openclash
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-passwall
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ssr-plus
+
 #更换插件名称
 #sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
@@ -74,6 +79,11 @@ git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adg
 #luci-app-autotimeset
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-autotimeset
 
+#额外插件
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+
+# 添加 luci-app-accesscontrol-plus 插件
+git clone https://github.com/CrazyPegasus/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus
 
 ########依赖包########
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages brook
@@ -111,7 +121,7 @@ git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adg
 ##########################################其他设置##########################################
 
 # 修改默认登录地址
-sed -i 's/192.168.1.1/10.1.1.254/g' ./package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.8.8/g' ./package/base-files/files/bin/config_generate
 
 # 修改默认登录密码
 #sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7:::/g' ./package/base-files/files/etc/shadow
