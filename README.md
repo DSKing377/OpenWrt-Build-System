@@ -1,20 +1,30 @@
 # 默认配置
 
-- IP: `10.1.1.254`
+- IP: `192.168.8.8`
 - 用户名: `root`
 - 密码: `无`
 - 插件:
 ```
-ShadowSocksR Plus+
-PassWall
+accesscontrol-plus
+adguardhome
+openappfilter
+argon-config
+arpbind
+autoreboot
+ddns
+ddns-go
+diskman
+dockerman
+hd-idle
+homeproxy
+netdata
 Openclash
-Netdata
-Auto time set
-AdGuard Home
-Mosdns
-DDNS-go
-ZeroTier
-Openvpn
+PassWall
+poweroff
+ramfree
+smartdns
+usb-printer
+vlmcsd
 应用中心(iStore)
 ```
 
@@ -22,14 +32,14 @@ Openvpn
 # 使用说明
 
 ## Fork 本项目  ==>  Actions  ==>  选择项目  ==>  Run Workflow
-[![LEDE_x86_64](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/LEDE_x86_64.yml/badge.svg)](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/LEDE_x86_64.yml)
-[![iStoreOS_x86_64_22.03](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/istoreos_x86_64_22.03.yml/badge.svg)](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/istoreos_x86_64_22.03.yml)
-[![immortalwrt_x86_64_23.05](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/immortalwrt_x86_64.yml/badge.svg)](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/immortalwrt_x86_64.yml)
+[![LEDE_x86_64](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/LEDE_x86_64.yml/badge.svg)](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/LEDE_x86_64.yml)
+[![iStoreOS_x86_64_22.03](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/istoreos_x86_64_22.03.yml/badge.svg)](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/istoreos_x86_64_22.03.yml)
+[![immortalwrt_x86_64_23.05](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/immortalwrt_x86_64.yml/badge.svg)](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/immortalwrt_x86_64.yml)
   
    
 ---
 
-## [![Manually with SSH](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/Manually%20with%20SSH.yml/badge.svg?branch=master&event=workflow_dispatch)](https://github.com/lmxslpc/OpenWrt-Build-System/actions/workflows/Manually%20with%20SSH.yml)
+## [![Manually with SSH](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/Manually%20with%20SSH.yml/badge.svg?branch=master&event=workflow_dispatch)](https://github.com/DSKing377/OpenWrt-Build-System/actions/workflows/Manually%20with%20SSH.yml)
 #####  可用于修改编译内容或手动编译
   
    
