@@ -102,7 +102,13 @@ jobs:
     - name: Clone Lienol source code
       run: |
         git clone --depth 1 ${{ env.REPO_URL }} -b ${{ env.REPO_BRANCH }} ${{ env.BD_PROJECT }}
-       
+
+    - name: Add Lienol feed
+      working-directory: ./${{ env.BD_PROJECT }}
+      run: |
+        echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default
+        cat feeds.conf.default  # 确保 feeds.conf.default 里包含 lienol
+        
     - name: Free up disk space
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -126,6 +132,8 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./${{ env.BD_PROJECT }}
       run: |
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
         mv $GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }} $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}/feeds.conf
         ./scripts/feeds update -a
         ./scripts/feeds install -a
