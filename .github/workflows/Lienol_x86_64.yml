@@ -129,25 +129,32 @@ jobs:
         echo "BD_PROJECT=${{ env.BD_PROJECT }}"
         echo "BD_TARGET=${{ env.BD_TARGET }}"
         echo "TARGET_PLATFORM=${{ env.TARGET_PLATFORM }}"
-        ls -l $GITHUB_WORKSPACE/feeds/
-
-        mkdir -p $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}
-
-        # 确保 feeds 文件存在
-        if [ ! -f "$GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }}" ]; then
-          touch $GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }}
-        fi
-
-        mv $GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }} $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}/feeds.conf
-
-        # 删除 feeds.conf.default 里重复的条目
+        echo ">>> Checking feeds.conf.default before modification..."
+        cat feeds.conf.default
+  
+        # 删除 feeds.conf.default 里可能重复的条目
         sed -i '/src-git packages/d' feeds.conf.default
         sed -i '/src-git luci/d' feeds.conf.default
         sed -i '/src-git routing/d' feeds.conf.default
         sed -i '/src-git telephony/d' feeds.conf.default
         sed -i '/src-git lienol/d' feeds.conf.default
         sed -i '/src-git other/d' feeds.conf.default
+  
+        echo ">>> Checking feeds.conf.default after modification..."
+        cat feeds.conf.default
 
+        mkdir -p $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}
+
+        # 检查 feeds 文件是否存在
+        if [ -f "$GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }}" ]; then
+          mv $GITHUB_WORKSPACE/feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }} $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}/feeds.conf
+        else
+        echo "Warning: feeds/${{ env.BD_PROJECT }}_${{ env.BD_TARGET }} not found, creating an empty feeds.conf."
+          touch $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}/feeds.conf
+        fi
+
+        echo ">>> Checking feeds.conf..."
+        cat $GITHUB_WORKSPACE/${{ env.BD_PROJECT }}/feeds.conf
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         chmod +x $GITHUB_WORKSPACE/customize/*.sh
