@@ -83,6 +83,11 @@ jobs:
         sudo -E apt clean
         sudo -E timedatectl set-timezone "Asia/Shanghai"
 
+        # 安装 Python2 pip 并安装 pyelftools
+        wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+        sudo python2.7 get-pip.py
+        pip2 install pyelftools
+
     - name: Environment Customization
       run: |
         # 在这里可以根据选择的 ssh_debug 进行相应的环境设置
