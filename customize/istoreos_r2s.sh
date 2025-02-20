@@ -34,9 +34,12 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome
 
 #科学上网
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-openclash
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-passwall
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ssr-plus
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
+git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
+
 # 更换插件名称
 # sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
