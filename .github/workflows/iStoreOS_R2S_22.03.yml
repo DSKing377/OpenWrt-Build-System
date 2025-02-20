@@ -86,7 +86,8 @@ jobs:
         # 安装 Python2 pip 并安装 pyelftools
         wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
         sudo python2.7 get-pip.py
-        pip2 install pyelftools
+        pip2 install setuptools==44.0.0
+        pip2 install pyelftools==0.27
 
     - name: Environment Customization
       run: |
