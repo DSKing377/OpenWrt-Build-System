@@ -27,10 +27,10 @@ function git_sparse_clone() {
 
 #添加 ddns-go
 #rm -rf feeds/small8/ddns-go feeds/small8/luci-app-ddns-go
-# git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
+git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
 #adguardhome
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome
 
 #科学上网
@@ -41,55 +41,55 @@ git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-pas
 # sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
 #ddns-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ddns-go
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ddns-go
 
 #Netdata
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages netdata
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-netdata
-sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/controller/*.lua
-sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/model/cgi/*.lua
-sed -i 's/admin\/status/admin\/system/g' package/linpc/luci-app-netdata/luasrc/view/netdata/*.htm
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-netdata
+#sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/controller/*.lua
+#sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/model/cgi/*.lua
+#sed -i 's/admin\/status/admin\/system/g' package/linpc/luci-app-netdata/luasrc/view/netdata/*.htm
 
 #zerotier
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-zerotier
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages zerotier
 
 ########依赖包########
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages brook
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages chinadns-ng
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2socks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2tcp
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages gn
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages hysteria
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ipt2socks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages microsocks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages naiveproxy
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages pdnsd-alt
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocksr-libev
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocks-rust
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages simple-obfs
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages sing-box
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ssocks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages tcping
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages brook
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages chinadns-ng
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2socks
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2tcp
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages gn
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages hysteria
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages ipt2socks
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages microsocks
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages naiveproxy
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages pdnsd-alt
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocksr-libev
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocks-rust
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages simple-obfs
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages sing-box
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages ssocks
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages tcping
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan-plus
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages tuic-client
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan-plus
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages tuic-client
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-core
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-geodata
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-plugin
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages xray-core
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages xray-plugin
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-neturl
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-neturl
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages mosdns
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages redsocks2
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadow-tls
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-maxminddb
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages redsocks2
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadow-tls
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-maxminddb
 
 ##########################################其他设置##########################################
 # 修改默认登录地址
-# sed -i 's/192.168.1.1/10.1.1.254/g' ./package/base-files/files/bin/config_generate
+# sed -i 's/192.168.1.1/192.168.2.1/g' ./package/base-files/files/bin/config_generate
 
 # 修改默认登录密码
 sed -i 's/$1$5mjCdAB1$Uk1sNbwoqfHxUmzRIeuZK1//g' ./package/base-files/files/etc/shadow
