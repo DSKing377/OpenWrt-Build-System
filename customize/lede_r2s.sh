@@ -52,7 +52,7 @@ sed -i 's/("iStore"),/("应用中心"),/g' package/linpc/luci-app-store/luasrc/c
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-app-openclash
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-app-passwall
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ssr-plus
-git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+#git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 #更换插件名称
 #sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
