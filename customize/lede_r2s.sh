@@ -28,7 +28,8 @@ function git_sparse_clone() {
 
 #luci-theme-argone
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-theme-argone
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-argone-config
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-argone-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
 
 #luci-app-store
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-store
