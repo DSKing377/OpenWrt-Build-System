@@ -80,8 +80,8 @@ git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ssr-plus
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-autotimeset
 
 #luci-app-oaf
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-oaf
-git_sparse_clone main https://github.com/kenzok8/small-package oaf
+# git_sparse_clone main https://github.com/kenzok8/small-package luci-app-oaf
+# git_sparse_clone main https://github.com/kenzok8/small-package oaf
 
 ########依赖包########
 git_sparse_clone main https://github.com/kenzok8/small-package brook
