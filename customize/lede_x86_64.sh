@@ -31,80 +31,80 @@ git_sparse_clone main https://github.com/kenzok8/small-package luci-theme-argone
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-argone-config
 
 #luci-app-store
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-store
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-lib-taskd
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-lib-xterm
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages taskd
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-store
+git_sparse_clone main https://github.com/kenzok8/small-package luci-lib-taskd
+git_sparse_clone main https://github.com/kenzok8/small-package luci-lib-xterm
+git_sparse_clone main https://github.com/kenzok8/small-package taskd
 #更换插件名称
 sed -i 's/("iStore"),/("应用中心"),/g' package/linpc/luci-app-store/luasrc/controller/store.lua
 
 #adguardhome
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-adguardhome
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages adguardhome
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-adguardhome
+#git_sparse_clone main https://github.com/kenzok8/small-package adguardhome
 
 #科学上网
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-openclash
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-passwall
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ssr-plus
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-openclash
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-passwall
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ssr-plus
 #更换插件名称
 #sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
 #ddns-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ddns-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-ddns-go
+git_sparse_clone main https://github.com/kenzok8/small-package ddns-go
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ddns-go
 # rm -rf feeds/small8/ddns-go feeds/small8/luci-app-ddns-go
 # git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
 #Netdata
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages netdata
+#git_sparse_clone main https://github.com/kenzok8/small-package netdata
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/linpc/luci-app-netdata
 sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/controller/*.lua
 sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/model/cgi/*.lua
 sed -i 's/admin\/status/admin\/system/g' package/linpc/luci-app-netdata/luasrc/view/netdata/*.htm
 
 #mosdns
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages mosdns
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-mosdns
+#git_sparse_clone main https://github.com/kenzok8/small-package mosdns
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-mosdns
 
 #zerotier
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-zerotier
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages zerotier
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-zerotier
+#git_sparse_clone main https://github.com/kenzok8/small-package zerotier
 
 #luci-app-autotimeset
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-autotimeset
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-autotimeset
 
 
 ########依赖包########
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages brook
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages chinadns-ng
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2socks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages dns2tcp
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages gn
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages hysteria
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ipt2socks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages microsocks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages naiveproxy
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages pdnsd-alt
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocksr-libev
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadowsocks-rust
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages simple-obfs
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages sing-box
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages ssocks
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages tcping
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan-go
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages trojan-plus
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages tuic-client
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-core
-#git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-geodata
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages v2ray-plugin
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages xray-core
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages xray-plugin
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-neturl
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages mosdns
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages redsocks2
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages shadow-tls
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages lua-maxminddb
+git_sparse_clone main https://github.com/kenzok8/small-package brook
+git_sparse_clone main https://github.com/kenzok8/small-package chinadns-ng
+git_sparse_clone main https://github.com/kenzok8/small-package dns2socks
+git_sparse_clone main https://github.com/kenzok8/small-package dns2tcp
+git_sparse_clone main https://github.com/kenzok8/small-package gn
+git_sparse_clone main https://github.com/kenzok8/small-package hysteria
+git_sparse_clone main https://github.com/kenzok8/small-package ipt2socks
+git_sparse_clone main https://github.com/kenzok8/small-package microsocks
+git_sparse_clone main https://github.com/kenzok8/small-package naiveproxy
+#git_sparse_clone main https://github.com/kenzok8/small-package pdnsd-alt
+git_sparse_clone main https://github.com/kenzok8/small-package shadowsocksr-libev
+git_sparse_clone main https://github.com/kenzok8/small-package shadowsocks-rust
+git_sparse_clone main https://github.com/kenzok8/small-package simple-obfs
+git_sparse_clone main https://github.com/kenzok8/small-package sing-box
+git_sparse_clone main https://github.com/kenzok8/small-package ssocks
+git_sparse_clone main https://github.com/kenzok8/small-package tcping
+git_sparse_clone main https://github.com/kenzok8/small-package trojan
+git_sparse_clone main https://github.com/kenzok8/small-package trojan-go
+git_sparse_clone main https://github.com/kenzok8/small-package trojan-plus
+git_sparse_clone main https://github.com/kenzok8/small-package tuic-client
+git_sparse_clone main https://github.com/kenzok8/small-package v2ray-core
+#git_sparse_clone main https://github.com/kenzok8/small-package v2ray-geodata
+git_sparse_clone main https://github.com/kenzok8/small-package v2ray-plugin
+git_sparse_clone main https://github.com/kenzok8/small-package xray-core
+git_sparse_clone main https://github.com/kenzok8/small-package xray-plugin
+git_sparse_clone main https://github.com/kenzok8/small-package lua-neturl
+git_sparse_clone main https://github.com/kenzok8/small-package mosdns
+git_sparse_clone main https://github.com/kenzok8/small-package redsocks2
+git_sparse_clone main https://github.com/kenzok8/small-package shadow-tls
+git_sparse_clone main https://github.com/kenzok8/small-package lua-maxminddb
 
 ##########################################其他设置##########################################
 
