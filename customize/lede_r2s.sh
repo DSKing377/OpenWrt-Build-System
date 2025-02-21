@@ -18,16 +18,16 @@ function git_sparse_clone() {
 
 
 # 移除冲突包
-rm -rf feeds/packages/net/mosdns
+#rm -rf feeds/packages/net/mosdns
 #rm -rf feeds/packages/net/msd_lite
 #rm -rf feeds/packages/net/smartdns
 #rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-mosdns
-rm -rf feeds/luci/applications/luci-app-netdata
+#rm -rf feeds/luci/applications/luci-app-mosdns
+#rm -rf feeds/luci/applications/luci-app-netdata
 #rm -rf feeds/small8/shadowsocks-rust
 
 #luci-theme-argone
-git_sparse_clone main https://github.com/kenzok8/small-package luci-theme-argone
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-theme-argone
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-argone-config
 
 #luci-app-store
@@ -35,36 +35,40 @@ git_sparse_clone main https://github.com/kenzok8/small-package luci-app-store
 git_sparse_clone main https://github.com/kenzok8/small-package luci-lib-taskd
 git_sparse_clone main https://github.com/kenzok8/small-package luci-lib-xterm
 git_sparse_clone main https://github.com/kenzok8/small-package taskd
+
+git_sparse_clone main https://github.com/kenzok8/small-package luci-app-quickstart
+git_sparse_clone main https://github.com/kenzok8/small-package quickstart
+
 #更换插件名称
 sed -i 's/("iStore"),/("应用中心"),/g' package/linpc/luci-app-store/luasrc/controller/store.lua
 
 #adguardhome
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-adguardhome
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-adguardhome
 #git_sparse_clone main https://github.com/kenzok8/small-package adguardhome
 
 #科学上网
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-openclash
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-passwall
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-openclash
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-passwall
 git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ssr-plus
 #更换插件名称
 #sed -i 's/ShadowSocksR Plus+/科学上网/g' feeds/small8/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
 
 #ddns-go
-git_sparse_clone main https://github.com/kenzok8/small-package ddns-go
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ddns-go
+#git_sparse_clone main https://github.com/kenzok8/small-package ddns-go
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-ddns-go
 # rm -rf feeds/small8/ddns-go feeds/small8/luci-app-ddns-go
 # git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
 #Netdata
 #git_sparse_clone main https://github.com/kenzok8/small-package netdata
-git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/linpc/luci-app-netdata
-sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/controller/*.lua
-sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/model/cgi/*.lua
-sed -i 's/admin\/status/admin\/system/g' package/linpc/luci-app-netdata/luasrc/view/netdata/*.htm
+#git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/linpc/luci-app-netdata
+#sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/controller/*.lua
+#sed -i 's/"status"/"system"/g' package/linpc/luci-app-netdata/luasrc/model/cgi/*.lua
+#sed -i 's/admin\/status/admin\/system/g' package/linpc/luci-app-netdata/luasrc/view/netdata/*.htm
 
 #mosdns
 #git_sparse_clone main https://github.com/kenzok8/small-package mosdns
-git_sparse_clone main https://github.com/kenzok8/small-package luci-app-mosdns
+#git_sparse_clone main https://github.com/kenzok8/small-package luci-app-mosdns
 
 #zerotier
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-app-zerotier
@@ -113,10 +117,10 @@ git_sparse_clone main https://github.com/kenzok8/small-package lua-maxminddb
 
 
 # 修改默认登录地址
-sed -i 's/192.168.1.1/10.1.1.254/g' ./package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.50.1/g' ./package/base-files/files/bin/config_generate
 
 #2. 修改默认登录密码
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' ./package/lean/default-settings/files/zzz-default-settings
+#sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' ./package/lean/default-settings/files/zzz-default-settings
 
 # 修改内核版本
 #sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
