@@ -25,6 +25,7 @@ function git_sparse_clone() {
 #rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/applications/luci-app-netdata
 #rm -rf feeds/small8/shadowsocks-rust
+rm -rf luci-app-argon-config # if have
 
 #luci-theme-argone
 #git_sparse_clone main https://github.com/kenzok8/small-package luci-theme-argone
