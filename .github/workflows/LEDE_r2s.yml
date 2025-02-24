@@ -378,21 +378,19 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址: 10.1.1.254
+          - 🌐 默认地址: 192.168.50.1
           - 🔑 默认密码: 空                
 
           ### 📒 插件列表:
           ```
-          ShadowSocksR Plus+
           PassWall
           Openclash
-          Netdata
+          Samba4
           Autotimeset
           AdGuardHome
-          Mosdns
+          Smartdns
           DDNS-go
-          ZeroTier
-          Openvpn
+          Quickstart
           应用中心(iStore)
           ```
 
