@@ -85,36 +85,36 @@ git_sparse_clone main https://github.com/kenzok8/small-package luci-app-autotime
 # git_sparse_clone main https://github.com/kenzok8/small-package oaf
 
 ########依赖包########
-git_sparse_clone main https://github.com/kenzok8/small-package brook
-git_sparse_clone main https://github.com/kenzok8/small-package chinadns-ng
-git_sparse_clone main https://github.com/kenzok8/small-package dns2socks
-git_sparse_clone main https://github.com/kenzok8/small-package dns2tcp
-git_sparse_clone main https://github.com/kenzok8/small-package gn
-git_sparse_clone main https://github.com/kenzok8/small-package hysteria
-git_sparse_clone main https://github.com/kenzok8/small-package ipt2socks
-git_sparse_clone main https://github.com/kenzok8/small-package microsocks
-git_sparse_clone main https://github.com/kenzok8/small-package naiveproxy
-git_sparse_clone main https://github.com/kenzok8/small-package pdnsd-alt
-git_sparse_clone main https://github.com/kenzok8/small-package shadowsocksr-libev
-git_sparse_clone main https://github.com/kenzok8/small-package shadowsocks-rust
-git_sparse_clone main https://github.com/kenzok8/small-package simple-obfs
-git_sparse_clone main https://github.com/kenzok8/small-package sing-box
-git_sparse_clone main https://github.com/kenzok8/small-package ssocks
-git_sparse_clone main https://github.com/kenzok8/small-package tcping
-git_sparse_clone main https://github.com/kenzok8/small-package trojan
-git_sparse_clone main https://github.com/kenzok8/small-package trojan-go
-git_sparse_clone main https://github.com/kenzok8/small-package trojan-plus
-git_sparse_clone main https://github.com/kenzok8/small-package tuic-client
-git_sparse_clone main https://github.com/kenzok8/small-package v2ray-core
-git_sparse_clone main https://github.com/kenzok8/small-package v2ray-geodata
-git_sparse_clone main https://github.com/kenzok8/small-package v2ray-plugin
-git_sparse_clone main https://github.com/kenzok8/small-package xray-core
-git_sparse_clone main https://github.com/kenzok8/small-package xray-plugin
-git_sparse_clone main https://github.com/kenzok8/small-package lua-neturl
-git_sparse_clone main https://github.com/kenzok8/small-package mosdns
-git_sparse_clone main https://github.com/kenzok8/small-package redsocks2
-git_sparse_clone main https://github.com/kenzok8/small-package shadow-tls
-git_sparse_clone main https://github.com/kenzok8/small-package lua-maxminddb
+#git_sparse_clone main https://github.com/kenzok8/small-package brook
+#git_sparse_clone main https://github.com/kenzok8/small-package chinadns-ng
+#git_sparse_clone main https://github.com/kenzok8/small-package dns2socks
+#git_sparse_clone main https://github.com/kenzok8/small-package dns2tcp
+#git_sparse_clone main https://github.com/kenzok8/small-package gn
+#git_sparse_clone main https://github.com/kenzok8/small-package hysteria
+#git_sparse_clone main https://github.com/kenzok8/small-package ipt2socks
+#git_sparse_clone main https://github.com/kenzok8/small-package microsocks
+#git_sparse_clone main https://github.com/kenzok8/small-package naiveproxy
+#git_sparse_clone main https://github.com/kenzok8/small-package pdnsd-alt
+#git_sparse_clone main https://github.com/kenzok8/small-package shadowsocksr-libev
+#git_sparse_clone main https://github.com/kenzok8/small-package shadowsocks-rust
+#git_sparse_clone main https://github.com/kenzok8/small-package simple-obfs
+#git_sparse_clone main https://github.com/kenzok8/small-package sing-box
+#git_sparse_clone main https://github.com/kenzok8/small-package ssocks
+#git_sparse_clone main https://github.com/kenzok8/small-package tcping
+#git_sparse_clone main https://github.com/kenzok8/small-package trojan
+#git_sparse_clone main https://github.com/kenzok8/small-package trojan-go
+#git_sparse_clone main https://github.com/kenzok8/small-package trojan-plus
+#git_sparse_clone main https://github.com/kenzok8/small-package tuic-client
+#git_sparse_clone main https://github.com/kenzok8/small-package v2ray-core
+#git_sparse_clone main https://github.com/kenzok8/small-package v2ray-geodata
+#git_sparse_clone main https://github.com/kenzok8/small-package v2ray-plugin
+#git_sparse_clone main https://github.com/kenzok8/small-package xray-core
+#git_sparse_clone main https://github.com/kenzok8/small-package xray-plugin
+#git_sparse_clone main https://github.com/kenzok8/small-package lua-neturl
+#git_sparse_clone main https://github.com/kenzok8/small-package mosdns
+#git_sparse_clone main https://github.com/kenzok8/small-package redsocks2
+#git_sparse_clone main https://github.com/kenzok8/small-package shadow-tls
+#git_sparse_clone main https://github.com/kenzok8/small-package lua-maxminddb
 
 ##########################################其他设置##########################################
 
